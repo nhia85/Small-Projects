@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^niblock-bankruptcylaw\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://niblock-bankruptcylaw..com/$1 [R,L]
+
+Header set X-Robots-Tag "noindex, nofollow"
+DirectoryIndex index.php
+
+Header set X-Robots-Tag "noindex, nofollow"
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [L]

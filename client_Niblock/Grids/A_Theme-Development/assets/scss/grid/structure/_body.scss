@@ -1,0 +1,63 @@
+#header {
+  display: grid;
+  padding-top: 20px;
+  margin-top: -10px;
+  position:relative;
+  width: 100%;
+  margin-bottom: $default-gap;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    width:100%;
+    background-color: snow;
+    color: rgb(73, 73, 73);
+  padding: $default-gap/2 0 $default-gap/2 0;
+  }
+  
+  .grid{
+    @include second-width;
+    display: grid;
+    justify-self: center;
+  }
+
+  .c-gaped {
+    grid-column-gap: $default-gap;
+  }
+  
+  .r-gaped {
+    grid-row-gap: $default-gap;
+  }
+  
+  .gaped {
+    grid-row-gap: $default-gap;
+    grid-column-gap: $default-gap;
+  }
+  
+  
+
+  
+  @media (max-width: $medium-size){
+    .grid {
+        padding: 0px 1vw 0px 1vw;
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        min-width: 320px;
+      }
+
+      .m_c-gaped {
+        grid-column-gap: $default-gap;
+      }
+      
+      .m_r-gaped {
+        grid-row-gap: $default-gap;
+      }
+      
+      .m_gaped {
+        grid-row-gap: $default-gap;
+        grid-column-gap: $default-gap;
+      }
+  }

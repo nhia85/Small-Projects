@@ -1,0 +1,665 @@
+@import "base/variables";
+@import "base/mixins";
+
+$main-color: #003f7f;
+$accent-color: #ffb200;
+
+.big-gaps{
+  column-gap: 4vw;
+}
+
+body{
+  background: linear-gradient(white, white) no-repeat center, url("../img/background.svg");
+  background-size: 90% 100%, contain;
+  @media (max-width: 800px) {
+    background-size: 100% 100%, cover;
+  }
+  .wrapper{
+    background: none;
+  }
+}
+
+#header{
+  background: url("../img/little-rock-background.jpg") no-repeat 50% 80%;
+  background-size: cover;
+  color: white;
+  box-shadow: black 0px 2px 5px 1px;
+  @media (max-width: 640px) {
+    box-shadow: none;
+    background: none;
+    color: #494949;
+  }
+.grid{
+  align-items: center;
+}
+  #logo{
+    width: 18vw;
+    padding: .5vw 1vw .5vw 1vw;
+    border-radius: 5px;
+    @media (max-width: 640px) {
+      padding: 1vw 2vw 1vw 2vw;
+      width: 45vw;
+    }
+  }
+  .phone-number{
+    color: $accent-color;
+    white-space: nowrap;
+    a{
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+    .header-center-l {
+      h3 {
+        @media (max-width: 640px) {
+          font-weight: 900;
+          font-size: 5.8vw;
+          text-align: center;
+        }
+      }
+    }
+    .header-right {
+      @media (max-width: 640px) {
+        margin-top: 3vw;
+        h3 {
+          font-size: 6.7vw;
+        }
+      }
+      #contact-grid{
+
+        #or-grid{
+          display: grid;
+          grid-template-columns: .5fr 1fr;
+        }
+        #modal-open-button{
+          width: 90%;
+          padding: 0;
+          border: none;
+          background:none;
+          cursor: pointer;
+          justify-self: center;
+          margin-left: 10px;
+          @media (max-width: $small-size) {
+            width: 60%;
+          }
+        }
+
+        #modal-open-button:focus{
+          outline:none;
+        }
+
+        #mail-icon{
+          .mailBody{
+            fill: $accent-color;
+          }
+          .mailSides{
+            fill: darken($accent-color, 5%)
+          }
+          .mailTop{
+            fill: lighten($accent-color, 10%)
+          }
+          .mailShadow{
+            fill: rgba(0, 0, 0, 0.5);
+          }
+        }
+
+      }
+    }
+    .header-center-r {
+      @media (max-width: 640px) {
+        h3 {
+          font-size: 5.5vw;
+        }
+      }
+    }
+}
+
+#title {
+  text-align: center;
+  padding: 0vw 0 2vw 0;
+  h1{
+    font-size: 4vw;
+    margin-top: -0.5vw;
+  }
+  @media (max-width: 640px) {
+    margin-top: 2vw;
+    margin-bottom: 2.5vw;
+    h1 {
+      font-size: 7vw;
+      margin-top: 0;
+    }
+  }
+  #title-default {
+    span {
+      font-size: 1.8vw;
+    }
+    @media (max-width: $small-size) {
+      font-size: 7vw;
+      span {
+        font-size: 6vw;
+      }
+    }
+  }
+
+  #title-chapter-7 {
+    font-size: 2.6vw;
+    line-height: 2vw;
+    span {
+      font-size: 2.6vw;
+    }
+    @media (max-width: $small-size) {
+      font-size: 7vw;
+
+      span {
+        font-size: 5.5vw;
+      }
+    }
+  }
+
+  #title-chapter-13 {
+    span {
+      font-size: 3vw;
+      @media (max-width: $small-size) {
+        font-size: 5.5vw;
+      }
+    }
+  }
+
+  #title-general {
+    span {
+      font-size: 3vw;
+    }
+  }
+
+  #title-blurb{
+    font-size: 2.3vw;
+    @media (max-width: $small-size) {
+      font-size: 5.5vw;
+    }
+  }
+
+  .no-office{
+    font-size: 4.1vw;
+    margin-bottom: 1vw;
+    @media (max-width: $small-size) {
+      font-size: 7vw;
+      margin-bottom: 0;
+    }
+  }
+  .no-office2{
+    @media (max-width: $small-size) {
+      font-size: 5.5vw;
+      margin-bottom: 2vw;
+    }
+  }
+
+}
+// End of title --------------------------
+
+#cont-1{
+padding-bottom: 1.5vw;
+
+#list{
+  list-style-type: square;
+  li{
+    margin-bottom: 2.5vw;
+    font-weight: bold;
+    font-size: 1.3vw;
+    @media (max-width: $small-size)  {
+      font-size: 4.5vw;
+    }
+  }
+
+
+  @media (max-width: 1024px) and (min-width: 640px){
+    width: 100%;
+    margin-bottom: 3vw;
+    li{
+      margin-bottom: 1.15vw;
+      font-weight: bold;
+      font-size: 2.1vw;
+    }
+  }
+}
+
+  #map-holder{
+  width: 100%;
+    height: 100%;
+    margin: 0 0 0 -10px;
+    @media (max-width: 640px) {
+      width: 95%;
+      margin: 2vw 0 4vw -5vw;
+    }
+    #map{
+      width: 100%;
+      margin: auto;
+      border: 6px solid $main-color;
+      box-shadow: black 3px 3px 5px 3px;
+
+    }
+  }
+#credit-holder {
+  height: 100%;
+  width: 100%;
+
+
+  #credit {
+    height: 100%;
+
+  }
+  #credit-score-svg{
+    #text{
+      fill: #494949;
+    }
+  }
+}
+}
+
+
+
+#cont-2{
+  padding: 2vw 0 3vw 0;
+  .grid{
+    border-bottom: 3px solid $main-color;
+  }
+  #mobile-credit-review{
+    text-align: center;
+  }
+  .ebook h3 {
+    text-align: center;
+  }
+  .ebook img {
+    @media (max-width: 640px){
+      width: 80%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: -30px;
+    }
+  }
+  .the-boot-img{
+    @media (max-width: 640px){
+      margin-left: -1.5rem;
+    }
+  }
+  .top-ten-img{
+    @media (max-width: 640px) {
+      margin-right: .7rem;
+    }
+  }
+  .middle-images{
+    background-repeat: no-repeat;
+    background-image: url('../img/banner_NEW.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+  .middle-icons{
+    background-color: rgba(36, 36, 36, 0.6);
+    margin-top: 21%;
+    margin-bottom: 0%;
+  }
+  .middle-icons ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 7px 30px 7px 30px;
+    display: inline;
+  }
+  .middle-icons ul li::after{
+    margin-top: 8px;
+    margin-left: 30px;
+    width: 1px;
+    height: 60px;
+    background-color: #fff;
+    content: "";
+    position: absolute;
+    @media (max-width: 640px){
+      height: 0;
+    }
+  }
+  .middle-icons ul{
+    margin-left: 20%;
+    @media (max-width: 640px){
+      margin-left: 0px;
+    }
+  }
+  #first-two{
+    margin-left: -9px;
+  }
+  #second-two{
+    margin-left: -36px;
+  }
+  #third-two{
+    margin-left: -6px;
+  }
+  #debt-eval{
+    text-align: center;
+    font-size: 2.8vw;
+
+    .phone-number{
+      color: $accent-color;
+      a{
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+  #debt-eval{
+    font-size: 5vw;
+  }
+    .call-now-mobile{
+      font-size: 7.8vw;
+    }
+  }
+}
+
+#cont-3{
+  h3{
+    font-weight: 900;margin-bottom: 1vw;
+  }
+  #body-reviews{
+    border-radius: 8px;
+    @media (max-width: $small-size) {
+    margin-top: 3vw;
+    }
+  }
+  .name{
+font-weight: 900;
+    margin-top: .5vw;
+    margin-bottom: 1.5vw;
+    @media (max-width: 640px) {
+    margin-bottom: 5.5vw;
+    }
+  }
+  .fresh{
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 2rem 2.5rem 2rem;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: table;
+    background: linear-gradient(to bottom left, $main-color 0%, lighten($main-color, 10) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00098a', endColorstr='#4147a4',GradientType=0 );
+
+    @media(max-width: 640px) {
+      h4{
+        font-size: 6vw;
+      }
+      h5{
+        margin-bottom:3vw;
+        font-size: 5vw;
+      }
+      li{
+        font-size: 4.8vw;
+        margin-bottom: 3vw;
+      }
+    }
+    ul{
+      list-style-type: none;
+      padding: 0;
+    }
+    li{
+      margin-top: .75vw;
+    }
+    li:before {
+      content: "\2714";
+      font-weight: 900;
+    }
+    h4{
+      margin-bottom:.2vw;
+    }
+    h5{
+      margin-bottom:1vw;
+    }
+
+  }
+}
+
+#firm-info{
+  margin-top: 4%;
+  margin-bottom: -4%;
+  background-color: #3e3e3e;
+  color: white;
+
+  .bottom-title{
+    text-align: center;
+  }
+
+  .thumb-icon{
+    margin-bottom: 3%;
+  }
+
+  .maps-iframe{
+    padding: 10px 20px 7px 9px;
+  }
+}
+
+#modal-form{
+  color: #494949;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.71);
+  #form-grid{
+    display: grid;
+    height: 99vh;
+  }
+  form{
+    padding: 1% 3% 1% 3%;
+    width: 50%;
+    position: inherit;
+    background-color: rgba(255, 255, 255, 0.76);
+    justify-self: center;
+    align-self: center;
+    box-shadow: $default-shadow;
+    @media (max-width: $small-size) {
+    width: 95%;
+    }
+    .submit-button input{
+    background-color: $accent-color;
+    }
+    #consent-grid{
+      margin-top: 10px;
+      #consent{
+        box-shadow: none;
+      }
+    }
+
+  }
+}
+
+
+
+
+.start-closed{
+display: none;
+}
+
+.open{
+animation: open .4s forwards ease-in-out;
+}
+
+.grow{
+  animation: grow .2s forwards ease-in-out;
+}
+
+
+@keyframes open {
+  0%{
+    display: none;
+    opacity: 0;
+  }
+  1%{
+    display: block;
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+from{
+  transform: scale(.8);
+}
+to{
+  transform: scale(1);
+}
+}
+
+#reviews{
+
+  background: linear-gradient($main-color, darken($main-color, 20%));
+
+  h3{
+    margin-bottom: 1vw;
+  }
+  .wrapper{
+    color: white;
+    margin-bottom: -4vw;
+    margin-top: 4vw ;
+  }
+  .grid{
+    padding-top: 2vw;
+  }
+}
+#reviews div.wrapper:not(:first-child){
+  //I love this is possible with css lol
+  .grid{
+    border-top: 4px solid darken($main-color, 20%) ;
+  }
+}
+
+
+#reviews div.wrapper:first-child{
+  border-top: 8px solid darken($main-color, 20%) ;
+}
+
+
+
+
+#disclaimer{
+  margin-top: 4vw ;
+  padding-top: 2vw;
+  background: darken($main-color, 20%);
+  color: #cccccc;
+  .grid{
+    padding-top: 2vw;
+    border-top: 2px solid rgba(255, 255, 255, 0.58);
+  }
+  p{
+    margin-bottom: 1.5vw;
+  }
+  @media (max-width: 640px) {
+p{
+  margin-bottom: 3vw;
+}
+  }
+}
+
+
+.call-bar-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: sticky;
+  background-color: darken($main-color, 15%);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: .5rem 0 .5rem 0;
+  box-shadow: $default-shadow;
+
+.call-bar-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: .3fr 1fr .3fr;
+  grid-column-gap: .3rem;
+  width: 90%;
+  justify-self: center;
+
+
+.call-bar-cta{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  p{
+    color: white;
+    font-size: 3.2vw;
+  }
+}
+
+.call-bar-cta h1 {
+  text-align: center;
+  color: #ffffff;
+  pointer-events: none;
+  touch-action: none;
+}
+
+.call-bar-cta a {
+  text-decoration: none;
+}
+
+  .circle-button{
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 360px;
+    height: 50px;
+    width: 50px;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    box-shadow: $default-shadow;
+  }
+
+  #call-bar-mail-icon {
+
+    #mail-icon {
+      width: 75%;
+      align-self: center;
+      justify-self: center;
+      .mailBody {
+        fill: $accent-color;
+      }
+
+      .mailSides {
+        fill: darken($accent-color, 5%)
+      }
+
+      .mailTop {
+        fill: lighten($accent-color, 10%)
+      }
+
+      .mailShadow {
+        fill: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .mob-call{
+    display: grid;
+  }
+
+  #phone-icon {
+    width: 65%;
+    align-self: center;
+    justify-self: center;
+    .phoneShadow {
+      fill: rgba(0, 0, 0, 0.5);
+    }
+
+    .phoneBody {
+      fill: $accent-color;
+    }
+
+    .phoneTop {
+      fill: darken($accent-color, 5%)
+    }
+
+  }
+}
+}

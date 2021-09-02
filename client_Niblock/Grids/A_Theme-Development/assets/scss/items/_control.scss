@@ -1,0 +1,104 @@
+ .l-hide {
+    @media (min-width: $medium-size) {
+      display: none !important;
+    }
+}
+.m_hide{
+  @media (max-width: $medium-size) and (min-width: $small-size) {
+        display: none !important;
+      }
+}
+.s_hide{
+    @media (max-width: $small-size ) {
+    display: none !important;
+    }
+}
+.hide-0-0-0{
+    @media (min-width: $medium-size) {
+        display: none !important;
+      }
+  @media (max-width: $medium-size) and (min-width: $small-size) {
+        display: none !important;
+      }
+    @media (max-width: $small-size ) {
+        display: none !important;
+        }
+}
+.hide-0-0-1{
+    @media (min-width: $medium-size) {
+        display: none !important;
+      }
+    @media (max-width: $medium-size) and (min-width: $small-size) {
+        display: none !important;
+      }
+    @media (max-width: $small-size ) {
+
+        }
+}
+.hide-0-1-1{
+    @media (min-width: $medium-size) {
+        display: none !important;
+      }
+    @media (max-width: $medium-size) {
+
+      }
+  @media (max-width: $medium-size) and (min-width: $small-size) {
+
+        }
+}
+.hide-1-1-1{
+    @media (min-width: $medium-size) {
+
+      }
+  @media (max-width: $medium-size) and (min-width: $small-size) {
+
+      }
+    @media (max-width: $small-size ) {
+
+        }
+}
+.hide-1-1-0{
+    @media (min-width: $medium-size) {
+
+      }
+  @media (max-width: $medium-size) and (min-width: $small-size) {
+
+      }
+    @media (max-width: $small-size ) {
+        display: none !important;
+        }
+}
+.hide-1-0-0{
+    @media (min-width: $medium-size) {
+
+      }
+  @media (max-width: $medium-size) and (min-width: $small-size) {
+        display: none !important;
+      }
+    @media (max-width: $small-size ) {
+        display: none !important;
+        }
+}
+.hide-1-0-1{
+    @media (min-width: $medium-size) {
+
+      }
+    @media (max-width: $medium-size) and (min-width: $small-size) {
+        display: none !important;
+      }
+    @media (max-width: $small-size ) {
+
+        }
+}
+.hide-0-1-0{
+    @media (min-width: $medium-size) {
+        display: none !important;
+      }
+    @media (max-width: $medium-size) {
+
+      }
+    @media (max-width: $small-size ) {
+        display: none !important;
+        }
+}
+
